@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>My ToDo List</title>
+    </head>
+    <body>
+        <h1>What do <strong>you</strong> have to do?</h1>
+        <form class="mainQuestion" action="/" method="post">
+            <input type="text" name="newTask" value="" placeholder="What is your next task?">
+            <button type="submit" name="button">Submit</button>
+        </form>
+
+
+
+        {{#tasks}} <!--new Task needs to be defined -->
+        <form class="newTask" action="index.html" method="post">
+            <input type="submit" name="" value="">{{.}} <!--text needs to be defined -->
+        </form>
+        {{/tasks}}
+
+    </body>
+</html>
