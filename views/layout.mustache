@@ -14,10 +14,29 @@
 
 
         {{#tasks}} <!--new Task needs to be defined -->
-        <form class="newTask" action="index.html" method="post">
-            <input type="submit" name="" value="">{{.}} <!--text needs to be defined -->
+        <form class="newTask" action="/a" method="post">
+            <button type="submit" name="theTask" value="{{.}}">Complete {{.}}</button> <!--text needs to be defined -->
         </form>
         {{/tasks}}
+
+
+        <div class="completedTasks">
+
+            <h2>Complete</h2>
+            {{#complete}}
+
+            <button type="button" name="{{.}}">
+                <strike>{{.}}</strike>
+            </button>
+
+
+        <!-- <form class="complete" action="/b" method="post">
+            <input type="submit" name="completedTask" value=""> <!-text needs to be defined -->
+        <!-- </form> -->
+
+            {{/complete}}
+
+        </div>
 
     </body>
 </html>
