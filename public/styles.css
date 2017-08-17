@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    align-content: center;
+    /*align-items: center;*/
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+h1{
+    background-color: red;
+    color: black;
+}
+
+.newTask {
+    border: solid;
+    border-color: black;
+    border-width: thin;
+}
+
+h2 {
+    background-color: blue;
+    color: black
+}
+
+.completedTasks {
+    border: solid;
+    border-color: black;
+    border-width: thin;
+}

@@ -20,7 +20,11 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(expressValidator());
 
 
+
+
+
 app.use(routes);
+app.use(express.static('public'));
 
 
 
