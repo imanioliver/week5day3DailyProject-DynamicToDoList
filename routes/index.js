@@ -15,6 +15,8 @@ router.post("/", function(req, res) {
     let newTask = req.body.newTask;
         tasks.push(newTask);
         console.log(tasks);
+
+
         res.redirect("/");
 
 
@@ -23,20 +25,23 @@ router.post("/", function(req, res) {
 
 router.post("/a", function(req, res){
 
-    // if (newTask) {
-    //
-    // }
+    complete.push(tasks.splice(tasks.indexOf(req.body.theTask),1));
 
-
-    tasks.splice(tasks.indexOf(req.body.theTask),1);
-
-    complete.push(req.body.theTask) //make sure that this is putting into the complete object
+    // complete.push(req.body.theTask) //make sure that this is putting into the complete object
     console.log(complete); //tell it where to to go
 
     res.redirect('/');
 
-})
+});
 
+
+router.post("/b", function(req, res){
+
+    tasks.push(complete.splice(complete.indexOf(req.body.completeTask), 1));
+
+res.redirect('/');
+
+});
 
 
 

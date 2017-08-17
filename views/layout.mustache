@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>My ToDo List</title>
+        <link rel="stylesheet" href="/styles.css">
     </head>
     <body>
         <h1>What do <strong>you</strong> have to do?</h1>
@@ -22,13 +23,16 @@
 
         <div class="completedTasks">
 
-            <h2>Complete</h2>
+            <h2>Completed Tasks</h2>
             {{#complete}}
+                <form class="completedTasks" action="/b" method="post">
+                    <button type="button" name="completeTask">
+                        <strike>{{.}}</strike>
+                    </button>
+                </form>
 
-            <button type="button" name="{{.}}">
-                <strike>{{.}}</strike>
-            </button>
 
+                    <!-- <p>If you'd like to push your complete tasks back into your Todos, just click the task!</p> -->
 
         <!-- <form class="complete" action="/b" method="post">
             <input type="submit" name="completedTask" value=""> <!-text needs to be defined -->
